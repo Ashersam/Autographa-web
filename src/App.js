@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import TableData from './TableData';
 import Main from './components/main';
 
 function App() {
