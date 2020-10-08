@@ -96,6 +96,7 @@ export default function CustomSpecification({
 
   useEffect(() => {
     localForage.getItem("custonSpec", function (err, value) {
+      if(value)
       setCustomelectedbookObj(value);
       // logger.debug(
         // `customspecification.js, changed custom on canonSpec change with ${value}`
@@ -146,6 +147,7 @@ export default function CustomSpecification({
     setCustonOpen(false);
     if (selectedbook) {
       let selectedbookObj = { id: textRef.current.value, books: selectedbook };
+      console.log(selectedbookObj, customselectedbookObj)
       customselectedbookObj.push(selectedbookObj);
       setCustomelectedbookObj(customselectedbookObj);
     }
